@@ -1,8 +1,6 @@
-# use the alt key
+# use the alt key as mod
 set $mod Mod1
 set $win mod4
-
-#font pango: System San Francisco Display 10
 
 floating_modifier $mod
 
@@ -14,7 +12,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+q kill
 
 # start browser
-bindsym $mod+n exec firefox-nightly
+bindsym $mod+n exec firefox
 
 # start ranger
 bindsym $mod+i exec urxvt -e ranger
@@ -23,30 +21,24 @@ bindsym $mod+i exec urxvt -e ranger
 bindsym $win+l exec i3lock-next
 
 # volume
-bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute
-bindsym XF86AudioLowerVolume exec amixer -q set Master 2dB- unmute
+bindsym XF87AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run
-
-# floating
-for_window [class="float"] floating enable
-bindsym $mod+Shift+Return exec urxvt --class float
-bindsym $mod+Shift+n exec firefox --class float
-
+bindsym $mod+d exec rofi -show run -lines 4 -eh 1 -font "Droid Sans 20" -matching fuzzy
 
 # thin borders
-hide_edge_borders both
+#hide_edge_borders none
 
 #disable titlebar
 for_window [class="^.*"] border pixel 1
 
 # gaps
-gaps inner 25
-gaps outer 15
+gaps inner 21
+gaps outer 13
 
-smart_gaps on
-smart_borders on
+#smart_gaps on
+#smart_borders on
 
 # change focus
 bindsym $mod+j focus left
@@ -99,38 +91,35 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace $ws1 
+bindsym $mod+2 workspace $ws2 
+bindsym $mod+3 workspace $ws3 
+bindsym $mod+4 workspace $ws4 
+bindsym $mod+5 workspace $ws5 
+bindsym $mod+6 workspace $ws6 
+bindsym $mod+7 workspace $ws7 
+bindsym $mod+8 workspace $ws8 
+bindsym $mod+9 workspace $ws9 
+bindsym $mod+0 workspace $ws10 
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+
+# restart i3
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-#-old-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec xfce4-session-logout
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -182,10 +171,10 @@ set $base0F #ab7967
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          #00ff00
-client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
-client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
+#client.focused          $bg-color           $bg-color          $text-color          #00ff00
+#client.unfocused        $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+#client.focused_inactive $inactive-bg-color $inactive-bg-color $inactive-text-color #00ff00
+#client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          #00ff00
 
 #bar {
 #    status_command i3blocks
@@ -206,9 +195,32 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 #	}
 #}
 
+# customize workspace name
+set $ws1 "1:"
+set $ws2 "2:"
+set $ws3 "3:"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8:" 
+set $ws9 "9:"
+set $ws10 "10:"
+
+# assign programs to certain workspaces
+assign [class="firefox"] $ws1
+assign [class="Steam"] $ws8
+assign [class="Spotify"] $ws9
+assign [class="discord"] $ws10
+
+# assign workspaces to certain monitors
+workspace $ws8 output DVI-I-1
+workspace $ws9 output DVI-I-1
+
 exec --no-startup-id dunst -config ~/.dunstrc
-exec --no-startup-id feh --bg-fill $(find ~/.config/wallpapers -type f | sort -R | tail -1)
-exec --no-startup-id compton -b
+exec_always --no-startup-id feh --bg-fill $(find ~/.config/wallpapers/ -type f | sort -R | tail -1)
+exec --no-startup-id compton -bf -D 10
 exec --no-startup-id xrandr --output DVI-I-1 --auto --left-of DVI-D-1
 exec --no-startup-id redshift
-exec_always  polybar example
+exec --no-startup-id polybar example -r
+exec --no-startup-id setxkbmap -option caps:escape

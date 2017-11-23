@@ -1,4 +1,3 @@
-
 URxvt.internalBorder: 19
 URxvt.cursorBlink: true
 URxvt.scrollBar: false
@@ -26,6 +25,13 @@ Xcursor.size: 18
 #define base0D #81a2be
 #define base0E #b294bb
 #define base0F #a3685a
+
+rofi.color-enabled: true
+!rofi.color-window: #002b37, #002b37, #003642
+rofi.color-window: base05
+rofi.color-normal: #002b37, #819396, #003643, #008ed4, #ffffff
+rofi.color-active: #002b37, #008ed4, #003643, #008ed4, #66c6ff
+rofi.color-urgent: #002b37, #da4281, #003643, #008ed4, #890661
 
 *.foreground:   base05
 #ifdef background_opacity
@@ -62,5 +68,5 @@ Xcursor.size: 18
 *.color20:      base04
 *.color21: base06
 
-URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-URxvt.keysym.Shift-Control-C: eval:selection_to_clipboardURxvt.keysym.Shift-Control-V: eval:paste_clipboard
+!URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+!URxvt.keysym.Shift-Control-C: eval:selection_to_clipboardURxvt.keysym.Shift-Control-V: eval:paste_clipboard

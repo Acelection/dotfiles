@@ -1,0 +1,44 @@
+#arch install guide
+
+loadkeys de
+ping google.com
+timedatectl set-ntp true
+cfdisk
+mkfs.ext4 /dev/sda2
+mkfs.fat -F32 /dev/sda1
+mkdir /mnt/boot
+mount /dev/sda2 /mnt
+mount /dev/sda1 /mnt/boot
+pacstrap /mnt base
+genfstab -U /mnt >> /mnt/etc/fstab
+arch-chroot /mnt
+ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+
+hwclock --systohc
+vi /etc/locale.gen
+locale-gen
+vi /etc/locale.conf
+vi /etc/vconsole.conf
+vi /etc/hostname
+passwd
+
+Pacman -S refind-efi intel-ucode
+refind-install
+mkdir -p /boot/EFI/refind
+cp /usr/share/refind/refind_x64.efi /boot/EFI/refind/
+cp /usr/share/refind/refind.conf-sample /boot/EFI/refind/refind.conf
+vi /boot/refind_linux.conf
+
+
+sudo pacman -S stow rxvt-unicode rofi feh compton redshift dunst sudo git base-devel lightdm lightdm-gtk-greeter zsh vim firefox xorg-server
+useradd -m david
+passwd david
+visudo
+git clone https://aur.archlinux.org/i3-gaps.git
+git clone https://aur.archlinux.org/ttf-meslo.git
+git clone https://aur.archlinux.org/polybar.git
+git clone https://aur.archlinux.org/i3lock-color.git
+git clone https://github.com/owenthewizard/i3lock-next.git
+git clone https://aur.archlinux.org/polybar.git
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+systemctl enable lightdm

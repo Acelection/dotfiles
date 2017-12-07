@@ -20,12 +20,15 @@ bindsym $mod+i exec urxvt -e ranger
 # lock computer
 bindsym $win+l exec i3lock-next
 
+# take screenshot
+bindsym Print exec maim -g 1920x1080+1920+0 | xclip -selection clipboard -t image/png
 # volume
-bindsym XF87AudioRaiseVolume exec pactl set-sink-volume 0 +5%
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 
 # start rofi (a program launcher)
-bindsym $mod+d exec rofi -show run -lines 4 -eh 1 -font "Droid Sans 20" -matching fuzzy
+#bindsym $mod+d exec rofi -show run -lines 4 -eh 1 -font "Droid Sans 20" -matching fuzzy
+bindsym $mod+d exec --no-startup-id rofi -show drun -display-drun "" -fuzzy
 
 # thin borders
 #hide_edge_borders none
@@ -210,17 +213,17 @@ set $ws10 "10:"
 # assign programs to certain workspaces
 assign [class="firefox"] $ws1
 assign [class="Steam"] $ws8
-assign [class="Spotify"] $ws9
+assign [class="(?i)spotify"] $ws9
 assign [class="discord"] $ws10
 
 # assign workspaces to certain monitors
 workspace $ws8 output DVI-I-1
 workspace $ws9 output DVI-I-1
 
-exec --no-startup-id dunst -config ~/.dunstrc
+#exec --no-startup-id dunst -config ~/.dunstrc
 exec_always --no-startup-id feh --bg-fill $(find ~/.config/wallpapers/ -type f | sort -R | tail -1)
 exec --no-startup-id compton -bf -D 10
 exec --no-startup-id xrandr --output DVI-I-1 --auto --left-of DVI-D-1
 exec --no-startup-id redshift
 exec --no-startup-id polybar example -r
-exec --no-startup-id setxkbmap -option caps:escape
+exec --no-startup-id setxkbmap de -option caps:escape

@@ -30,7 +30,7 @@ cp /usr/share/refind/refind.conf-sample /boot/EFI/refind/refind.conf
 vi /boot/refind_linux.conf
 
 
-sudo pacman -S stow rxvt-unicode rofi feh compton redshift dunst sudo git base-devel lightdm lightdm-gtk-greeter zsh vim firefox xorg-server
+sudo pacman -S stow rxvt-unicode rofi feh compton redshift dunst sudo git base-devel lightdm lightdm-gtk-greeter zsh vim firefox xorg-server xorg-xrdb ttf-font-awesome pulseaudio
 useradd -m david
 passwd david
 visudo

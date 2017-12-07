@@ -1,13 +1,28 @@
+;completely transparent
+;
+;;[colors]
+;;background = ${xrdb:color0:#222}
+;background = #ea01060d
+;background-alt = #db444444
+;;foreground = ${xrdb:color7:#222}
+;foreground = #dbdfdfdf
+;foreground-alt = #db555555
+;primary = #dbffb52a
+;secondary = #dbe60053
+;alert = #dbbd2c40
+
 [colors]
-;background = ${xrdb:color0:#222}
-background = #ea01060d
-background-alt = #db444444
-;foreground = ${xrdb:color7:#222}
-foreground = #dbdfdfdf
-foreground-alt = #db555555
-primary = #dbffb52a
-secondary = #dbe60053
-alert = #dbbd2c40
+; background = ${xrdb:color0:#222}
+background = #50000000
+; background = #222
+background-alt = #444
+; foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #ffb52a
+secondary = #e60053
+alert = #bd2c40
+
 
 [bar/example]
 monitor = ${env:MONITOR:DVI-D-1}
@@ -19,8 +34,11 @@ height = 27
 ;background = ${colors.background}
 ;foreground = ${colors.foreground}
 
-background = #00000000
-foreground = #ccffffff
+;background = #00000000
+;foreground = #ccffffff
+
+background = ${colors.background}
+foreground = ${colors.foreground}
 
 line-size = 3
 line-color = #f00

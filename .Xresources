@@ -1,7 +1,7 @@
-URxvt.internalBorder: 19
+URxvt.internalBorder: 18
 URxvt.cursorBlink: true
 URxvt.scrollBar: false
-URxvt.perl-ext-common: default,matcher
+URxvt.perl-ext-common: default,matcher,resize-font,
 URxvt.matcher.button: 1
 URxvt.font: xft:Menlo :size=11
 Xcursor.size: 18

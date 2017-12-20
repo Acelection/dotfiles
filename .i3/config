@@ -22,6 +22,7 @@ bindsym $win+l exec i3lock-next
 
 # take screenshot
 bindsym Print exec maim -g 1920x1080+1920+0 | xclip -selection clipboard -t image/png
+
 # volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%

@@ -100,5 +100,4 @@ alias scrt='sudo systemctl restart'
 alias sce='sudo systemctl enable'
 alias scd='sudo systemctl disable'
 alias scs='systemctl status'
-alias record='ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0+1920 -c:v libx264 -crf 0 -preset ultrafast'
 set -o vi

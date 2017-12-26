@@ -21,25 +21,28 @@ bindsym $mod+i exec urxvt -e ranger
 bindsym $win+l exec i3lock-next
 
 # take screenshot
-bindsym Print exec maim -g 1920x1080+1920+0 | xclip -selection clipboard -t image/png
+bindsym Print exec maim -g 1920x1080+1920+0 | xclip -selection clipboard -t image/png && notify-send Screenshot "Screenshot copied to clipboard"
+
+#record screen
+bindsym $mod+p exec notify-send ffmpeg "started recording" && ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0+1920 -c:v libx264 -crf 0 -preset ultrafast output.mkv
+bindsym $mod+o exec killall ffmpeg && notify-send ffmpeg "stopped recording"
 
 # volume
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume 0 -5%
 
 # start rofi (a program launcher)
-#bindsym $mod+d exec rofi -show run -lines 4 -eh 1 -font "Droid Sans 20" -matching fuzzy
 bindsym $mod+d exec --no-startup-id rofi -show drun -display-drun "" -fuzzy
 
 # thin borders
-#hide_edge_borders none
+hide_edge_borders none
 
 #disable titlebar
 for_window [class="^.*"] border pixel 1
 
 # gaps
-gaps inner 21
-gaps outer 13
+gaps inner 20
+gaps outer 12
 
 #smart_gaps on
 #smart_borders on
@@ -133,10 +136,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym j resize grow height 10 px or 10 ppt
+        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt

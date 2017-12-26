@@ -34,11 +34,5 @@ sudo pacman -S stow rxvt-unicode rofi feh compton redshift dunst sudo git base-d
 useradd -m david
 passwd david
 visudo
-git clone https://aur.archlinux.org/i3-gaps.git
-git clone https://aur.archlinux.org/ttf-meslo.git
-git clone https://aur.archlinux.org/polybar.git
-git clone https://aur.archlinux.org/i3lock-color.git
-git clone https://github.com/owenthewizard/i3lock-next.git
-git clone https://aur.archlinux.org/polybar.git
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 systemctl enable lightdm

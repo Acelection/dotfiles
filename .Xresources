@@ -1,7 +1,8 @@
 URxvt.internalBorder: 18
 URxvt.cursorBlink: true
 URxvt.scrollBar: false
-URxvt.perl-ext-common: default,matcher,resize-font,
+URxvt.perl-ext-common: default,matcher,resize-font, keyboard-select
+URxvt.keysym.C-u: perl:keyboard-select:activate
 URxvt.matcher.button: 1
 URxvt.font: xft:Menlo :size=11
 Xcursor.size: 18
@@ -102,6 +103,3 @@ rofi.mesg: "hello"
 *.color19:      base02
 *.color20:      base04
 *.color21: base06
-
-!URxvt.keysym.Shift-Control-V: eval:paste_clipboard
-!URxvt.keysym.Shift-Control-C: eval:selection_to_clipboardURxvt.keysym.Shift-Control-V: eval:paste_clipboard

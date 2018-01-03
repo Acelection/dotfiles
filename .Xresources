@@ -4,7 +4,7 @@ URxvt.scrollBar: false
 URxvt.perl-ext-common: default,matcher,resize-font, keyboard-select
 URxvt.keysym.C-u: perl:keyboard-select:activate
 URxvt.matcher.button: 1
-URxvt.font: xft:Menlo :size=11
+URxvt.font: xft:Menlo :size=11, xft:FontAwesome:size=10
 Xcursor.size: 18
 
 ! Base16 Tomorrow Night

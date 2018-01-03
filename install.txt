@@ -36,3 +36,76 @@ passwd david
 visudo
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 systemctl enable lightdm
+
+
+autoconf 2.69-4
+automake 1.15.1-1
+bison 3.0.4-3
+cava 0.6.0-1
+cmatrix 1.2a-12
+compton 0.1_beta2.5-10
+discord-canary 0.0.44-1
+dunst 1.2.0-1
+fakeroot 1.22-1
+firefox 57.0.3-1
+flex 2.6.4-1
+google-chrome 63.0.3239.108-1
+grub 2:2.02-4
+htop 2.0.2-2
+i3lock-next-git r69.c7634f4-1
+iftop 1.0pre4-2
+inetutils 1.9.4-5
+intel-ucode 20171117-1
+iputils 20161105.1f2bb12-2
+jfsutils 1.1.15-4
+licenses 20171006-1
+lightdm-webkit2-greeter 2.2.5-1
+linux 4.14.10-1
+logrotate 3.13.0-1
+lvm2 2.02.177-1
+maim 5.4.68-2
+make 4.2.1-2
+man-db 2.7.6.1-2
+man-pages 4.14-1
+mdadm 4.0-1
+mlocate 0.26-6
+mpv 1:0.27.0-5
+nano 2.9.1-1
+neofetch 3.3.0-1
+netctl 1.14-1
+nmap 7.60-1
+openssh 7.6p1-1
+pacaur 4.7.10-1
+patch 2.7.5-1
+pcmciautils 018-7
+pkg-config 0.29.2-1
+playerctl 0.5.0-4
+polybar 3.1.0-2
+psmisc 23.1-1
+pulsemixer 1.4.0-1
+ranger 1.8.1-1
+redshift 1.11-4
+refind-efi 0.11.2-1
+reiserfsprogs 3.6.27-1
+rofi 1.4.2-1
+spotify 1.0.69.336-1
+steam 1.0.0.54-3
+stow 2.2.2-5
+terminus-font 4.46-1
+ttf-font-awesome 4.7.0-5
+ttf-material-icons r122.7fbdfc47a-2
+ttf-meslo 1.2.1-1
+unzip 6.0-12
+urxvt-perls 2.2-1
+urxvt-resize-font-git 14.97c91ec-1
+usbutils 009-1
+vi 1:070224-2
+vim 8.0.1415-1
+which 2.21-2
+whois 5.2.19-1
+xclip 0.13-1
+xfsprogs 4.13.1-1
+xorg-server 1.19.6-2
+xorg-xrdb 1.1.0-2
+zsh 5.4.2-1
+

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="input_device" mtime="1516022742" type="string">
+		<stringvalue>Default (PTLIB/ALSA)</stringvalue>
+	</entry>
+	<entry name="output_device" mtime="1516022742" type="string">
+		<stringvalue>Default (PTLIB/ALSA)</stringvalue>
+	</entry>
+</gconf>

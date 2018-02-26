@@ -14,17 +14,21 @@ bindsym $mod+q kill
 # start browser
 bindsym $mod+n exec firefox
 
+# open todo list
+bindsym $mod+m exec urxvt -e sh -c "vim ~/todo"
+
 # start ranger
 bindsym $mod+i exec urxvt -e ranger
 
 # lock computer
-bindsym $win+l exec i3lock-next
+#bindsym $win+l exec i3lock-next
+bindsym $win+l exec betterlockscreen -l
 
 # take screenshot
-bindsym Print exec maim -g 1920x1080+1920+0 | xclip -selection clipboard -t image/png && notify-send Screenshot "Screenshot copied to clipboard"
+bindsym Print exec maim -g 1920x1200+0+0 | xclip -selection clipboard -t image/png && notify-send Screenshot "Screenshot copied to clipboard"
 
 #record screen
-bindsym $mod+p exec notify-send ffmpeg "started recording" && ffmpeg -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0+1920 -c:v libx264 -crf 0 -preset ultrafast output.mkv
+bindsym $mod+p exec notify-send ffmpeg "started recording" && ffmpeg -video_size 1920x1200 -framerate 30 -f x11grab -i :0.0 -c:v libx264 -crf 0 -preset ultrafast output.mkv
 bindsym $mod+o exec killall ffmpeg && notify-send ffmpeg "stopped recording"
 
 # volume
@@ -41,8 +45,8 @@ hide_edge_borders none
 for_window [class="^.*"] border pixel 1
 
 # gaps
-gaps inner 20
-gaps outer 12
+gaps inner 18
+gaps outer 10
 
 #smart_gaps on
 #smart_borders on
@@ -210,24 +214,27 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8:" 
-set $ws9 "9:"
-set $ws10 "10:"
+#set $ws8 "8:" 
+set $ws8 "8" 
+#set $ws9 "9:"
+set $ws9 "9:"
+set $ws10 "10:"
 
 # assign programs to certain workspaces
-assign [class="firefox"] $ws1
-assign [class="Steam"] $ws8
-assign [class="(?i)spotify"] $ws9
-assign [class="discord"] $ws10
+#assign [class="firefox"] $ws1
+#assign [class="Steam"] $ws8
+#assign [class="(?i)spotify"] $ws9
+#assign [class="discord"] $ws10
 
 # assign workspaces to certain monitors
-workspace $ws8 output DVI-I-1
-workspace $ws9 output DVI-I-1
+#workspace $ws8 output DVI-I-1
+#workspace $ws9 output DVI-I-1
 
-#exec --no-startup-id dunst -config ~/.dunstrc
-exec_always --no-startup-id feh --bg-fill $(find ~/.config/wallpapers/ -type f | sort -R | tail -1)
+exec --no-startup-id dunst
+exec_always --no-startup-id feh --bg-fill $(find ~/.config/wallpapers/active/ -type f | sort -R | tail -1)
 exec --no-startup-id compton -bf -D 10
-exec --no-startup-id xrandr --output DVI-I-1 --auto --left-of DVI-D-1
+exec --no-startup-id xrandr --output eDP-1 --off --output HDMI-3 --auto --left-of HDMI-2
 exec --no-startup-id redshift
-exec --no-startup-id polybar example -r
+exec --no-startup-id polybar example 
 exec --no-startup-id setxkbmap de nodeadkeys -option caps:escape
+exec --no-startup-id xautolock -time 4 -notify 10 -notifier "notify-send Lockscreen 'The screen will lock in 10 seconds'" -locker "betterlockscreen -l"

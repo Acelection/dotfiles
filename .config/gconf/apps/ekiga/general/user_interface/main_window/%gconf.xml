@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="panel_section" mtime="1517824476" type="int" value="1"/>
+	<entry name="size" mtime="1517824479" type="string">
+		<stringvalue>916,1106</stringvalue>
+	</entry>
+	<entry name="position" mtime="1517824479" type="string">
+		<stringvalue>970,60</stringvalue>
+	</entry>
+</gconf>

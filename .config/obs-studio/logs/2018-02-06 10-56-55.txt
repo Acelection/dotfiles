@@ -1,0 +1,213 @@
+10:56:55 AM.416: CPU Name: Intel(R) Core(TM) i7-4800MQ CPU @ 2.70GHz
+10:56:55 AM.416: CPU Speed: 2206.716MHz
+10:56:55 AM.417: Physical Cores: 4, Logical Cores: 8
+10:56:55 AM.417: Physical Memory: 7884MB Total, 1628MB Free
+10:56:55 AM.417: Kernel Version: Linux 4.14.15-1-ARCH
+10:56:55 AM.417: Distribution: "Arch Linux" Unknown
+10:56:55 AM.417: Portable mode: false
+10:56:55 AM.435: OBS 21.0.2-1 (linux)
+10:56:55 AM.435: ---------------------------------
+10:56:55 AM.435: ---------------------------------
+10:56:55 AM.435: audio settings reset:
+10:56:55 AM.435: 	samples per sec: 44100
+10:56:55 AM.435: 	speakers:        2
+10:56:55 AM.439: ---------------------------------
+10:56:55 AM.440: Initializing OpenGL...
+10:56:55 AM.463: OpenGL version: 4.5 (Core Profile) Mesa 17.3.3
+10:56:55 AM.501: ---------------------------------
+10:56:55 AM.501: video settings reset:
+10:56:55 AM.501: 	base resolution:   1920x1080
+10:56:55 AM.501: 	output resolution: 1280x720
+10:56:55 AM.501: 	downscale filter:  Bicubic
+10:56:55 AM.501: 	fps:               60/1
+10:56:55 AM.501: 	format:            NV12
+10:56:55 AM.508: Audio monitoring device:
+10:56:55 AM.508: 	name: Default
+10:56:55 AM.508: 	id: default
+10:56:55 AM.508: ---------------------------------
+10:56:55 AM.509: os_dlopen(/usr//lib/obs-plugins/frontend-tools.so->/usr//lib/obs-plugins/frontend-tools.so): libluajit-5.1.so.2: cannot open shared object file: No such file or directory
+10:56:55 AM.509: 
+10:56:55 AM.509: Module '/usr//lib/obs-plugins/frontend-tools.so' not loaded
+10:56:55 AM.513: No blackmagic support
+10:56:55 AM.519: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+10:56:55 AM.519: 
+10:56:55 AM.519: os_dlopen(/usr//lib/obs-plugins/obs-libfdk.so->/usr//lib/obs-plugins/obs-libfdk.so): libfdk-aac.so.1: cannot open shared object file: No such file or directory
+10:56:55 AM.519: 
+10:56:55 AM.519: Module '/usr//lib/obs-plugins/obs-libfdk.so' not loaded
+10:56:55 AM.522: os_dlopen(libvlc.so.5->libvlc.so.5): libvlc.so.5: cannot open shared object file: No such file or directory
+10:56:55 AM.522: 
+10:56:55 AM.522: Couldn't find VLC installation, VLC video source disabled
+10:56:55 AM.522: ---------------------------------
+10:56:55 AM.522:   Loaded Modules:
+10:56:55 AM.522:     vlc-video.so
+10:56:55 AM.522:     text-freetype2.so
+10:56:55 AM.522:     rtmp-services.so
+10:56:55 AM.522:     obs-x264.so
+10:56:55 AM.522:     obs-transitions.so
+10:56:55 AM.522:     obs-outputs.so
+10:56:55 AM.522:     obs-filters.so
+10:56:55 AM.522:     obs-ffmpeg.so
+10:56:55 AM.522:     linux-v4l2.so
+10:56:55 AM.522:     linux-pulseaudio.so
+10:56:55 AM.522:     linux-jack.so
+10:56:55 AM.522:     linux-decklink.so
+10:56:55 AM.522:     linux-capture.so
+10:56:55 AM.522:     linux-alsa.so
+10:56:55 AM.522:     image-source.so
+10:56:55 AM.522: ---------------------------------
+10:56:55 AM.522: ==== Startup complete ===============================================
+10:56:55 AM.523: All scene data cleared
+10:56:55 AM.523: ------------------------------------------------
+10:56:55 AM.526: pulse-input: Server name: 'pulseaudio 11.1'
+10:56:55 AM.526: pulse-input: Audio format: s16le, 48000 Hz, 1 channels
+10:56:55 AM.526: pulse-input: Started recording from 'alsa_output.usb-GN_Netcom_A_S_Jabra_LINK_230_00002E5DFD1C07-00.analog-mono.monitor'
+10:56:55 AM.527: pulse-input: Server name: 'pulseaudio 11.1'
+10:56:55 AM.527: pulse-input: Audio format: s16le, 44100 Hz, 1 channels
+10:56:55 AM.528: pulse-input: Started recording from 'alsa_input.usb-GN_Netcom_A_S_Jabra_LINK_230_00002E5DFD1C07-00.analog-mono'
+10:56:55 AM.558: xshm-input: Geometry 1920x1200 @ 0,0
+10:56:55 AM.562: pulse-input: Server name: 'pulseaudio 11.1'
+10:56:55 AM.562: pulse-input: Audio format: s16le, 48000 Hz, 1 channels
+10:56:55 AM.562: pulse-input: Started recording from 'alsa_output.usb-GN_Netcom_A_S_Jabra_LINK_230_00002E5DFD1C07-00.analog-mono.monitor'
+10:56:55 AM.564: Switched to scene 'Scene'
+10:56:55 AM.564: ------------------------------------------------
+10:56:55 AM.564: Loaded scenes:
+10:56:55 AM.564: - scene 'Scene':
+10:56:55 AM.566:     - source: 'Screen Capture (XSHM) 2' (xshm_input)
+10:56:55 AM.566:     - source: 'Audio Output Capture (PulseAudio)' (pulse_output_capture)
+10:56:55 AM.566: ------------------------------------------------
+10:56:56 AM.036: adding 23 milliseconds of audio buffering, total audio buffering is now 23 milliseconds
+10:56:56 AM.388: adding 23 milliseconds of audio buffering, total audio buffering is now 46 milliseconds
+10:57:00 AM.285: ---------------------------------
+10:57:00 AM.285: [x264 encoder: 'simple_h264_stream'] preset: veryfast
+10:57:00 AM.285: [x264 encoder: 'simple_h264_stream'] settings:
+10:57:00 AM.285: 	rate_control: CBR
+10:57:00 AM.285: 	bitrate:      4350
+10:57:00 AM.285: 	buffer size:  4350
+10:57:00 AM.285: 	crf:          0
+10:57:00 AM.285: 	fps_num:      60
+10:57:00 AM.285: 	fps_den:      1
+10:57:00 AM.285: 	width:        1280
+10:57:00 AM.285: 	height:       720
+10:57:00 AM.285: 	keyint:       250
+10:57:00 AM.285: 
+10:57:00 AM.295: ---------------------------------
+10:57:00 AM.296: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: 3
+10:57:00 AM.296: 
+10:57:00 AM.299: [rtmp stream: 'simple_stream'] Connecting to RTMP URL rtmp://10.0.202.89/live...
+10:57:00 AM.399: [rtmp stream: 'simple_stream'] Connection to rtmp://10.0.202.89/live successful
+10:57:00 AM.400: ==== Streaming Start ===============================================
+11:01:30 AM.919: adding 23 milliseconds of audio buffering, total audio buffering is now 69 milliseconds
+11:01:51 AM.470: pulse-input: Stopped recording from 'default'
+11:01:51 AM.470: pulse-input: Got 59654 packets with 14476121 frames
+11:01:51 AM.470: pulse-input: Server name: 'pulseaudio 11.1'
+11:01:51 AM.471: pulse-input: Audio format: s16le, 48000 Hz, 1 channels
+11:01:51 AM.471: pulse-input: Started recording from 'alsa_output.usb-GN_Netcom_A_S_Jabra_LINK_230_00002E5DFD1C07-00.analog-mono.monitor'
+11:03:01 AM.965: [rtmp stream: 'simple_stream'] User stopped the stream
+11:03:01 AM.965: Output 'simple_stream': stopping
+11:03:01 AM.965: Output 'simple_stream': Total frames output: 21662
+11:03:01 AM.965: Output 'simple_stream': Total drawn frames: 21442 (21700 attempted)
+11:03:01 AM.965: Output 'simple_stream': Number of lagged frames due to rendering lag/stalls: 258 (1.2%)
+11:03:01 AM.966: ==== Streaming Stop ================================================
+11:03:09 AM.843: xshm-input: Geometry 1920x1200 @ 0,0
+11:03:17 AM.867: ---------------------------------
+11:03:17 AM.867: [x264 encoder: 'simple_h264_stream'] preset: veryfast
+11:03:17 AM.867: [x264 encoder: 'simple_h264_stream'] settings:
+11:03:17 AM.867: 	rate_control: CBR
+11:03:17 AM.867: 	bitrate:      4350
+11:03:17 AM.867: 	buffer size:  4350
+11:03:17 AM.867: 	crf:          0
+11:03:17 AM.867: 	fps_num:      60
+11:03:17 AM.867: 	fps_den:      1
+11:03:17 AM.867: 	width:        1280
+11:03:17 AM.867: 	height:       720
+11:03:17 AM.867: 	keyint:       250
+11:03:17 AM.867: 
+11:03:17 AM.876: ---------------------------------
+11:03:17 AM.877: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: 3
+11:03:17 AM.877: 
+11:03:17 AM.879: [rtmp stream: 'simple_stream'] Connecting to RTMP URL rtmp://10.0.202.89/live...
+11:03:17 AM.980: [rtmp stream: 'simple_stream'] Connection to rtmp://10.0.202.89/live successful
+11:03:17 AM.981: ==== Streaming Start ===============================================
+11:06:58 AM.771: pulse-input: Stopped recording from 'default'
+11:06:58 AM.771: pulse-input: Got 43940 packets with 10382528 frames
+11:06:58 AM.771: pulse-input: Unable to get server info !
+11:07:48 AM.465: User Removed source 'Audio Output Capture (PulseAudio)' (pulse_output_capture) from scene 'Scene'
+11:08:03 AM.995: pulse-input: Unable to get server info !
+11:08:03 AM.998: User added source 'Audio Output Capture (PulseAudio)' (pulse_output_capture) to scene 'Scene'
+11:09:29 AM.671: ==== Shutting down ==================================================
+11:09:29 AM.673: Switched to scene '(null)'
+11:09:29 AM.674: pulse-input: Stopped recording from 'alsa_output.usb-GN_Netcom_A_S_Jabra_LINK_230_00002E5DFD1C07-00.analog-mono.monitor'
+11:09:29 AM.674: pulse-input: Got 111248 packets with 24950264 frames
+11:09:29 AM.674: pulse-input: Stopped recording from 'alsa_input.usb-GN_Netcom_A_S_Jabra_LINK_230_00002E5DFD1C07-00.analog-mono'
+11:09:29 AM.674: pulse-input: Got 51150 packets with 22590798 frames
+11:09:29 AM.674: All scene data cleared
+11:09:29 AM.674: ------------------------------------------------
+11:09:29 AM.674: [rtmp stream: 'simple_stream'] User stopped the stream
+11:09:29 AM.674: Output 'simple_stream': stopping
+11:09:29 AM.674: Output 'simple_stream': Total frames output: 22271
+11:09:29 AM.674: Output 'simple_stream': Total drawn frames: 21984 (22308 attempted)
+11:09:29 AM.674: Output 'simple_stream': Number of lagged frames due to rendering lag/stalls: 324 (1.5%)
+11:09:29 AM.710: Freeing OBS context data
+11:09:29 AM.727: == Profiler Results =============================
+11:09:29 AM.727: run_program_init: 236.749 ms
+11:09:29 AM.727:  ┣OBSApp::AppInit: 0.722 ms
+11:09:29 AM.727:  ┃ ┗OBSApp::InitLocale: 0.616 ms
+11:09:29 AM.727:  ┗OBSApp::OBSInit: 225.598 ms
+11:09:29 AM.727:    ┣obs_startup: 15.343 ms
+11:09:29 AM.727:    ┗OBSBasic::OBSInit: 173.197 ms
+11:09:29 AM.727:      ┣OBSBasic::InitBasicConfig: 0.058 ms
+11:09:29 AM.727:      ┣OBSBasic::ResetAudio: 0.105 ms
+11:09:29 AM.727:      ┣OBSBasic::ResetVideo: 72.63 ms
+11:09:29 AM.727:      ┣OBSBasic::InitOBSCallbacks: 0.004 ms
+11:09:29 AM.727:      ┣OBSBasic::InitHotkeys: 0.036 ms
+11:09:29 AM.727:      ┣obs_load_all_modules: 14.808 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(image-source.so): 0.002 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(linux-alsa.so): 0.001 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(linux-capture.so): 0.217 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(linux-decklink.so): 0.069 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(linux-jack.so): 0.001 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(linux-pulseaudio.so): 0.002 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(linux-v4l2.so): 0.001 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(obs-ffmpeg.so): 0.104 ms
+11:09:29 AM.727:      ┃ ┃ ┗nvenc_check: 0.1 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(obs-filters.so): 0.005 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(obs-outputs.so): 0.001 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(obs-transitions.so): 0.007 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(obs-x264.so): 0.001 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(rtmp-services.so): 0.356 ms
+11:09:29 AM.727:      ┃ ┣obs_init_module(text-freetype2.so): 0.004 ms
+11:09:29 AM.727:      ┃ ┗obs_init_module(vlc-video.so): 0.132 ms
+11:09:29 AM.727:      ┣OBSBasic::ResetOutputs: 0.065 ms
+11:09:29 AM.727:      ┣OBSBasic::CreateHotkeys: 0.017 ms
+11:09:29 AM.727:      ┣OBSBasic::InitService: 0.021 ms
+11:09:29 AM.727:      ┣OBSBasic::InitPrimitives: 0.081 ms
+11:09:29 AM.727:      ┗OBSBasic::Load: 43.006 ms
+11:09:29 AM.727: obs_hotkey_thread(25 ms): min=0.042 ms, median=0.233 ms, max=57.336 ms, 99th percentile=11.091 ms, 99.6289% below 25 ms
+11:09:29 AM.727: audio_thread(Audio): min=0.012 ms, median=0.71 ms, max=29.454 ms, 99th percentile=7.971 ms
+11:09:29 AM.727:  ┗receive_audio: min=0.004 ms, median=0.533 ms, max=27.695 ms, 99th percentile=7.07 ms
+11:09:29 AM.727:    ┣buffer_audio: min=0 ms, median=0.004 ms, max=0.26 ms, 99th percentile=0.014 ms
+11:09:29 AM.727:    ┗do_encode: min=0.055 ms, median=0.514 ms, max=27.675 ms, 99th percentile=7.055 ms
+11:09:29 AM.728:      ┗encode(simple_aac): min=0.049 ms, median=0.469 ms, max=27.609 ms, 99th percentile=7.02 ms
+11:09:29 AM.728: obs_graphics_thread(16.6667 ms): min=0.317 ms, median=7.064 ms, max=106.67 ms, 99th percentile=22.443 ms, 93.1572% below 16.667 ms
+11:09:29 AM.728:  ┣tick_sources: min=0 ms, median=4.403 ms, max=60.586 ms, 99th percentile=14.885 ms
+11:09:29 AM.728:  ┣output_frame: min=0.313 ms, median=1.578 ms, max=33.045 ms, 99th percentile=4.764 ms
+11:09:29 AM.728:  ┃ ┣gs_context(video->graphics): min=0.196 ms, median=0.631 ms, max=33.045 ms, 99th percentile=3.636 ms
+11:09:29 AM.728:  ┃ ┃ ┣render_video: min=0.151 ms, median=0.505 ms, max=32.924 ms, 99th percentile=3.496 ms
+11:09:29 AM.728:  ┃ ┃ ┃ ┣render_main_texture: min=0.032 ms, median=0.308 ms, max=5.28 ms, 99th percentile=3.246 ms
+11:09:29 AM.728:  ┃ ┃ ┃ ┣render_output_texture: min=0.002 ms, median=0.078 ms, max=32.886 ms, 99th percentile=0.187 ms
+11:09:29 AM.728:  ┃ ┃ ┃ ┣render_convert_texture: min=0.001 ms, median=0.063 ms, max=5.443 ms, 99th percentile=0.163 ms
+11:09:29 AM.728:  ┃ ┃ ┃ ┗stage_output_texture: min=0 ms, median=0.029 ms, max=1.326 ms, 99th percentile=0.067 ms
+11:09:29 AM.728:  ┃ ┃ ┣download_frame: min=0 ms, median=0.006 ms, max=2.372 ms, 99th percentile=0.017 ms
+11:09:29 AM.728:  ┃ ┃ ┗gs_flush: min=0.026 ms, median=0.087 ms, max=3.565 ms, 99th percentile=0.181 ms
+11:09:29 AM.728:  ┃ ┗output_video_data: min=0.274 ms, median=0.909 ms, max=8.571 ms, 99th percentile=1.508 ms
+11:09:29 AM.728:  ┗render_displays: min=0.003 ms, median=0.848 ms, max=89.477 ms, 99th percentile=7.867 ms
+11:09:29 AM.728: video_thread(video): min=0 ms, median=2.214 ms, max=36.938 ms, 99th percentile=5.076 ms
+11:09:29 AM.728:  ┗receive_video: min=0.001 ms, median=2.225 ms, max=26.746 ms, 99th percentile=4.542 ms
+11:09:29 AM.728:    ┗do_encode: min=0.955 ms, median=2.224 ms, max=26.745 ms, 99th percentile=4.539 ms
+11:09:29 AM.728:      ┗encode(simple_h264_stream): min=0.943 ms, median=2.198 ms, max=26.683 ms, 99th percentile=4.355 ms
+11:09:29 AM.728: =================================================
+11:09:29 AM.728: == Profiler Time Between Calls ==================
+11:09:29 AM.728: obs_hotkey_thread(25 ms): min=25.105 ms, median=25.326 ms, max=82.435 ms, 72.8115% within ±2% of 25 ms (0% lower, 27.1885% higher)
+11:09:29 AM.728: obs_graphics_thread(16.6667 ms): min=7.625 ms, median=16.667 ms, max=106.906 ms, 87.7113% within ±2% of 16.667 ms (6.02118% lower, 6.26749% higher)
+11:09:29 AM.728: =================================================
+11:09:29 AM.838: Number of memory leaks: 0

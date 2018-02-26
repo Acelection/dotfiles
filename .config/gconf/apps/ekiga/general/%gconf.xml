@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="kind_of_net" mtime="1516022742" type="int" value="5"/>
+	<entry name="version" mtime="1516020151" type="int" value="4001"/>
+</gconf>

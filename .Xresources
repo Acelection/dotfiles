@@ -1,10 +1,13 @@
 URxvt.internalBorder: 18
 URxvt.cursorBlink: true
 URxvt.scrollBar: false
-URxvt.perl-ext-common: default,matcher,resize-font, keyboard-select
-URxvt.keysym.C-u: perl:keyboard-select:activate
+URxvt.perl-ext-common: default,matcher,resize-font,keyboard-select
+URxvt.keysym.C-o: perl:keyboard-select:activate
 URxvt.matcher.button: 1
-URxvt.font: xft:Menlo :size=11, xft:FontAwesome:size=10
+! URxvt.font: xft:Hack :size=13
+URxvt.font: xft:Dejavu Sans Mono:pixelsize=16
+! URxvt.font: xft:Roboto :pixelsize=15
+! URxvt.font: xft:Source Code Pro :pixelsize=17
 Xcursor.size: 18
 
 ! Base16 Tomorrow Night

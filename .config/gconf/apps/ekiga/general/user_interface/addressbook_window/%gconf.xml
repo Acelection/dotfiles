@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="size" mtime="1516022923" type="string">
+		<stringvalue>618,1106</stringvalue>
+	</entry>
+	<entry name="position" mtime="1516022923" type="string">
+		<stringvalue>650,60</stringvalue>
+	</entry>
+</gconf>

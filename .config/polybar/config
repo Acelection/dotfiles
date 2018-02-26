@@ -12,7 +12,7 @@ alert = #bd2c40
 
 
 [bar/example]
-monitor = ${env:MONITOR:DVI-D-1}
+monitor = ${env:MONITOR:HDMI-3}
 ;width = 90%
 height = 28
 ;fixed-center = true

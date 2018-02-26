@@ -1,0 +1,7 @@
+{
+    "settings": {
+        "key": "stream",
+        "server": "rtmp://10.0.202.89/live"
+    },
+    "type": "rtmp_custom"
+}

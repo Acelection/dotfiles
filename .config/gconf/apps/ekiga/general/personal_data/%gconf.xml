@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="full_name" mtime="1516022742" type="string">
+		<stringvalue>David Popp</stringvalue>
+	</entry>
+</gconf>

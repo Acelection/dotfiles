@@ -1,0 +1,27 @@
+67:09:43.863702 dns-monitor Log continuation - Log started 2018-02-06T13:52:35.950836000Z
+67:09:43.863759 dns-monitor   server 1: 10.0.20.101
+67:09:43.863774 dns-monitor   server 2: 10.0.20.102
+67:09:43.863781 dns-monitor   server 3: 10.0.20.103
+67:09:43.863785 dns-monitor   domain: towergroup.local
+67:09:43.863789 dns-monitor   search string 1: towergroup.local
+67:09:43.863795 dns-monitor HostDnsMonitor: new information
+67:09:43.863800 dns-monitor   no server entries
+67:09:43.863804 dns-monitor   no domain set
+67:09:43.863807 dns-monitor   no search string entries
+67:09:43.863820 dns-monitor HostDnsMonitorProxy::notify
+67:09:43.923230 MainPower Host suspending: Paused 2 VMs
+67:09:43.993199 MainPower Host resumed: Resumed 2 VMs
+67:09:52.562485 dns-monitor NAT: resolv.conf: nameserver 10.0.20.101
+67:09:52.562497 dns-monitor NAT: resolv.conf: nameserver 10.0.20.102
+67:09:52.562500 dns-monitor NAT: resolv.conf: nameserver 10.0.20.103
+67:09:52.562511 dns-monitor HostDnsMonitor: old information
+67:09:52.562514 dns-monitor   no server entries
+67:09:52.562516 dns-monitor   no domain set
+67:09:52.562519 dns-monitor   no search string entries
+67:09:52.562521 dns-monitor HostDnsMonitor: new information
+67:09:52.562522 dns-monitor   server 1: 10.0.20.101
+67:09:52.562524 dns-monitor   server 2: 10.0.20.102
+67:09:52.562526 dns-monitor   server 3: 10.0.20.103
+67:09:52.562528 dns-monitor   domain: towergroup.local
+67:09:52.562529 dns-monitor   search string 1: towergroup.local
+67:09:52.562532 dns-monitor HostDnsMonitorProxy::notify

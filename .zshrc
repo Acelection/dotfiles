@@ -56,6 +56,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# autojump file
+source /etc/profile.d/autojump.zsh
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -87,12 +90,12 @@ source $ZSH/oh-my-zsh.sh
 #
 # Import colorscheme from 'wal'
 #(wal -r &) 
+
+
 alias v="vim"
 alias vi="vim"
-alias pms="sudo pacman -S"
-alias pmsyu="sudo pacman -Syu"
-alias pmss="sudo pacman -Ss"
-alias sudo='nocorrect sudo '
+
+#alias sudo='nocorrect sudo '
 alias scst='sudo systemctl start'
 alias scsp='sudo systemctl stop'
 alias scrl='sudo systemctl reload'
@@ -100,4 +103,163 @@ alias scrt='sudo systemctl restart'
 alias sce='sudo systemctl enable'
 alias scd='sudo systemctl disable'
 alias scs='systemctl status'
+
+alias ap="ansible-playbook"
+alias ans="cd ~/git/ansible-project/roles && ls"
+alias dap="cd ~/git/david-playbooks/roles/"
+alias zshrc="vim ~/.zshrc && source ~/.zshrc"
+alias hist="history | grep"
 set -o vi
+
+
+
+################################################################################
+# ssh
+################################################################################
+#function s () {
+#	local lastarg host domain fqdn user ip args
+#	lastarg="${@:${#@}}"
+#	host="${lastarg#*@}"
+#	user="${lastarg%${host}}"
+#	args="${@:1:$((${#@}-1))}"
+#	for domain in "" "flyeralarm" "flyeralarm.com" "vm"; do
+#		fqdn=${host}${domain:+.${domain}}
+#		ip=$(dig +noall +answer "${fqdn}"|head -1|awk '{print $5}')
+#        if [[ ${ip} =~ ^[0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\+\. ]]
+#		    [ -n "${ip}" ] && break;
+#		    fqdn=""
+#	done
+#	[ -z "${fqdn}" ] && { echo "${host} not found" >&2; return 1; }
+#	ssh -t ${args:-} "${user:-root@}${fqdn}" "TERM=xterm bash -o vi"
+#}
+
+function s () {
+    local hostnames domain fqdn ip opt
+    hostnames=()
+    for domain in "flyeralarm" "flyeralarm.com" "vm"; do
+        fqdn=$1.$domain
+        ip=$(dig +noall +answer "${fqdn}"|head -1|awk '{print $5}')
+        if [[ ${ip} =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+ ]]; then
+            hostnames+=($fqdn)
+        fi
+    done
+    if [[ ${#hostnames[@]} -eq 0 ]]; then
+        echo "$1 not found"
+        return 1
+    elif [[ ${#hostnames[@]} -gt 1 ]]; then
+        echo "multiple hosts exist with that name:"
+        select opt in ${hostnames[@]}
+        do
+            ssh -t root@$opt "TERM=xterm bash -o vi"
+            return 0
+        done
+    else
+        ssh -t root@${hostnames[1]} "TERM=xterm bash -o vi"
+    fi
+}
+
+################################################################################
+# pastebin
+################################################################################
+
+_pastebin_host=${_pastebin_host:-https://pastebin.flyeralarm}
+
+function pastebin () {
+	local _url=$(curl -k -X POST -s --data-binary @- "${_pastebin_host:?}/documents"|\
+		awk -v "host=${_pastebin_host}" -F '"' '{print host "/" $4}')
+	if [[ -p /dev/stdout ]]; then
+		echo "${_url}" 1>&2
+	fi
+	echo "${_url}"
+}
+
+function showpaste() {
+	local _url
+	if [[ ! -p /dev/stdin ]]; then
+		_url="${1:?URL is missing}"
+	else
+		_url=$(cat)
+	fi
+	_url=$(echo "${_url}"|sed -e 's@^\(.*\)\(/[^/[:space:]]\+\)$@\1/raw\2@')
+	curl -ks ${_url}
+}
+
+################################################################################
+# icinga
+################################################################################
+# schdeule downtime for a host and all it's services
+# Arguments:
+#     1 - host name
+#     2 - duration, such that `date -d 'now + $2'` can understand it.
+#         e.g: '3hours' or '45minutes'
+#     3 - comment
+# Returns:
+#     None
+
+function icinga_schedule_downtime () {
+	local url
+	local data
+	url="https://status.flyeralarm:5665/v1/actions/schedule-downtime?filter="
+	url+="host.name==%22${1:?hostname missing}%22&type="
+	data='{ "start_time": '$(date +"%s")', "end_time": '$(date +"%s" -d "now + ${2:?duration missing}")
+	data+=', "author": "NAME"'${3+', "comment": "'${3}'"'}' }'
+	for t in Host Service; do
+		curl -kL -s -u "dashing:D4sH1N9" -H 'Accept: application/json' \
+		     -H 'Content-Type: application/json' -X POST "${url}${t}" -d "${data}" &>/dev/null ||\
+		{ echo "error for type=${t}"; return 1; }
+	done
+}
+
+# remove downtime for a host and all it's services
+# Arguments:
+#     1 - host name
+# Returns:
+#     None
+#
+function icinga_remove_downtime () {
+	local url
+	url="https://status.flyeralarm:5665/v1/actions/remove-downtime?filter="
+	url+="host.name==%22${1:?hostname missing}%22&type="
+	for t in Host Service; do
+		curl -kL -s -u "dashing:D4sH1N9" -H 'Accept: application/json' \
+			 -X POST "${url}${t}" &>/dev/null ||\
+		{ echo "error for type=${t}"; return 1; }
+	done
+}
+
+
+# ldapquery
+
+function ldapquery () {
+#    ldapsearch -x -D "TOWERGROUP\d.popp" -W -p 389 -h 10.0.20.101 -b \
+#        "dc=TOWERGROUP,dc=local" -s sub "(sAMAccountName=${1})" cn \
+#        sAMAccountName mail whenCreated whenChanged ipPhone
+ldapsearch -x -D "TOWERGROUP\d.popp" -W -p 389 -h 10.0.20.101 -b "dc=TOWERGROUP,dc=local" -s sub "(sAMAccountName=${1})" cn sAMAccountName mail whenCreated whenChanged ipPhone | awk 'BEGIN { RS="\n[[:space:]]*\n"; FS="\n" } $1 !~ /^# (search |extended LDIF|numResponses:)/ { print $0 }'
+}
+
+
+# mpw
+ #source bashlib
+mpw() {
+    _copy() {
+        if hash pbcopy 2>/dev/null; then
+            pbcopy
+        elif hash xclip 2>/dev/null; then
+            xclip -selection clip
+        else
+            cat; echo 2>/dev/null
+            return
+        fi
+        echo >&2 "Copied!"
+    }
+
+    # Empty the clipboard
+    :| _copy 2>/dev/null
+
+    # Ask for the user's name and password if not yet known.
+    #MPW_FULLNAME=${MPW_FULLNAME:-$(ask 'Your Full Name:')}
+    MPW_FULLNAME="David Popp"
+
+    # Start Master Password and copy the output.
+    printf %s "$(MPW_FULLNAME=$MPW_FULLNAME command mpw "$@")" | _copy
+}

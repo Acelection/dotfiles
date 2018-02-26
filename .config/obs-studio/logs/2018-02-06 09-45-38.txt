@@ -1,0 +1,292 @@
+09:45:40 AM.367: CPU Name: Intel(R) Core(TM) i7-4800MQ CPU @ 2.70GHz
+09:45:40 AM.367: CPU Speed: 1493.942MHz
+09:45:40 AM.367: Physical Cores: 4, Logical Cores: 8
+09:45:40 AM.367: Physical Memory: 7884MB Total, 1550MB Free
+09:45:40 AM.367: Kernel Version: Linux 4.14.15-1-ARCH
+09:45:40 AM.367: Distribution: "Arch Linux" Unknown
+09:45:40 AM.367: Portable mode: false
+09:45:40 AM.406: OBS 21.0.2-1 (linux)
+09:45:40 AM.406: ---------------------------------
+09:45:40 AM.409: ---------------------------------
+09:45:40 AM.409: audio settings reset:
+09:45:40 AM.409: 	samples per sec: 44100
+09:45:40 AM.409: 	speakers:        2
+09:45:40 AM.414: ---------------------------------
+09:45:40 AM.414: Initializing OpenGL...
+09:45:40 AM.437: OpenGL version: 4.5 (Core Profile) Mesa 17.3.3
+09:45:40 AM.477: ---------------------------------
+09:45:40 AM.477: video settings reset:
+09:45:40 AM.477: 	base resolution:   1920x1080
+09:45:40 AM.477: 	output resolution: 1280x720
+09:45:40 AM.477: 	downscale filter:  Bicubic
+09:45:40 AM.477: 	fps:               30/1
+09:45:40 AM.477: 	format:            NV12
+09:45:40 AM.485: Audio monitoring device:
+09:45:40 AM.485: 	name: Default
+09:45:40 AM.485: 	id: default
+09:45:40 AM.485: ---------------------------------
+09:45:40 AM.485: os_dlopen(/usr//lib/obs-plugins/frontend-tools.so->/usr//lib/obs-plugins/frontend-tools.so): libluajit-5.1.so.2: cannot open shared object file: No such file or directory
+09:45:40 AM.485: 
+09:45:40 AM.485: Module '/usr//lib/obs-plugins/frontend-tools.so' not loaded
+09:45:40 AM.489: No blackmagic support
+09:45:40 AM.508: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+09:45:40 AM.508: 
+09:45:40 AM.509: os_dlopen(/usr//lib/obs-plugins/obs-libfdk.so->/usr//lib/obs-plugins/obs-libfdk.so): libfdk-aac.so.1: cannot open shared object file: No such file or directory
+09:45:40 AM.509: 
+09:45:40 AM.509: Module '/usr//lib/obs-plugins/obs-libfdk.so' not loaded
+09:45:40 AM.514: os_dlopen(libvlc.so.5->libvlc.so.5): libvlc.so.5: cannot open shared object file: No such file or directory
+09:45:40 AM.514: 
+09:45:40 AM.514: Couldn't find VLC installation, VLC video source disabled
+09:45:40 AM.514: ---------------------------------
+09:45:40 AM.514:   Loaded Modules:
+09:45:40 AM.514:     vlc-video.so
+09:45:40 AM.514:     text-freetype2.so
+09:45:40 AM.514:     rtmp-services.so
+09:45:40 AM.514:     obs-x264.so
+09:45:40 AM.514:     obs-transitions.so
+09:45:40 AM.514:     obs-outputs.so
+09:45:40 AM.514:     obs-filters.so
+09:45:40 AM.514:     obs-ffmpeg.so
+09:45:40 AM.514:     linux-v4l2.so
+09:45:40 AM.514:     linux-pulseaudio.so
+09:45:40 AM.514:     linux-jack.so
+09:45:40 AM.514:     linux-decklink.so
+09:45:40 AM.514:     linux-capture.so
+09:45:40 AM.514:     linux-alsa.so
+09:45:40 AM.514:     image-source.so
+09:45:40 AM.514: ---------------------------------
+09:45:40 AM.514: ==== Startup complete ===============================================
+09:45:40 AM.514: Service '' not found
+09:45:40 AM.515: No scene file found, creating default scene
+09:45:40 AM.515: All scene data cleared
+09:45:40 AM.515: ------------------------------------------------
+09:45:40 AM.521: pulse-input: Server name: 'pulseaudio 11.1'
+09:45:40 AM.521: pulse-input: Audio format: s16le, 44100 Hz, 1 channels
+09:45:40 AM.521: pulse-input: Started recording from 'alsa_output.usb-GN_Netcom_A_S_Jabra_LINK_230_00002E5DFD1C07-00.analog-mono.monitor'
+09:45:40 AM.523: pulse-input: Server name: 'pulseaudio 11.1'
+09:45:40 AM.523: pulse-input: Audio format: s16le, 44100 Hz, 1 channels
+09:45:40 AM.524: pulse-input: Started recording from 'alsa_input.usb-GN_Netcom_A_S_Jabra_LINK_230_00002E5DFD1C07-00.analog-mono'
+09:45:40 AM.524: Switched to scene 'Scene'
+09:45:40 AM.524: Failed to glob scene collections
+09:45:41 AM.033: adding 23 milliseconds of audio buffering, total audio buffering is now 23 milliseconds
+09:47:06 AM.750: adding 23 milliseconds of audio buffering, total audio buffering is now 46 milliseconds
+09:52:47 AM.309: 
+09:52:47 AM.309: ==== Auto-config wizard testing commencing ======
+
+09:52:47 AM.319: ---------------------------------
+09:52:47 AM.319: video settings reset:
+09:52:47 AM.319: 	base resolution:   1920x1080
+09:52:47 AM.319: 	output resolution: 128x128
+09:52:47 AM.319: 	downscale filter:  Bicubic
+09:52:47 AM.319: 	fps:               60/1
+09:52:47 AM.319: 	format:            NV12
+09:52:47 AM.322: ---------------------------------
+09:52:47 AM.322: [x264 encoder: 'test_x264'] preset: veryfast
+09:52:47 AM.323: [x264 encoder: 'test_x264'] settings:
+09:52:47 AM.323: 	rate_control: CBR
+09:52:47 AM.323: 	bitrate:      10000
+09:52:47 AM.323: 	buffer size:  10000
+09:52:47 AM.323: 	crf:          0
+09:52:47 AM.323: 	fps_num:      60
+09:52:47 AM.323: 	fps_den:      1
+09:52:47 AM.323: 	width:        128
+09:52:47 AM.323: 	height:       128
+09:52:47 AM.323: 	keyint:       120
+09:52:47 AM.323: 
+09:52:47 AM.328: ---------------------------------
+09:52:47 AM.329: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: 3
+09:52:47 AM.329: 
+09:52:47 AM.330: [rtmp stream: 'test_stream'] Connecting to RTMP URL rtmp://10.0.202.89...
+09:52:47 AM.330: No application or playpath in URL!
+09:52:47 AM.335: RTMPSockBuf_Fill, remote host closed connection
+09:52:47 AM.335: [rtmp stream: 'test_stream'] Connection to rtmp://10.0.202.89 failed: -3
+09:52:47 AM.339: ---------------------------------
+09:52:47 AM.339: video settings reset:
+09:52:47 AM.339: 	base resolution:   1920x1080
+09:52:47 AM.339: 	output resolution: 1280x720
+09:52:47 AM.339: 	downscale filter:  Bicubic
+09:52:47 AM.339: 	fps:               30/1
+09:52:47 AM.339: 	format:            NV12
+09:52:58 AM.875: ---------------------------------
+09:52:58 AM.875: video settings reset:
+09:52:58 AM.875: 	base resolution:   1920x1080
+09:52:58 AM.875: 	output resolution: 128x128
+09:52:58 AM.875: 	downscale filter:  Bicubic
+09:52:58 AM.875: 	fps:               60/1
+09:52:58 AM.875: 	format:            NV12
+09:52:58 AM.877: ---------------------------------
+09:52:58 AM.877: [x264 encoder: 'test_x264'] preset: veryfast
+09:52:58 AM.877: [x264 encoder: 'test_x264'] settings:
+09:52:58 AM.877: 	rate_control: CBR
+09:52:58 AM.877: 	bitrate:      10000
+09:52:58 AM.877: 	buffer size:  10000
+09:52:58 AM.877: 	crf:          0
+09:52:58 AM.877: 	fps_num:      60
+09:52:58 AM.877: 	fps_den:      1
+09:52:58 AM.877: 	width:        128
+09:52:58 AM.877: 	height:       128
+09:52:58 AM.877: 	keyint:       120
+09:52:58 AM.877: 
+09:52:58 AM.879: ---------------------------------
+09:52:58 AM.879: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: 3
+09:52:58 AM.879: 
+09:52:58 AM.880: [rtmp stream: 'test_stream'] Connecting to RTMP URL rtmp://10.0.202.89/live...
+09:52:58 AM.981: [rtmp stream: 'test_stream'] Connection to rtmp://10.0.202.89/live successful
+09:53:11 AM.860: [rtmp stream: 'test_stream'] User stopped the stream
+09:53:11 AM.861: Output 'test_stream': stopping
+09:53:11 AM.861: Output 'test_stream': Total frames output: 754
+09:53:11 AM.861: Output 'test_stream': Total drawn frames: 779
+09:53:11 AM.877: ---------------------------------
+09:53:11 AM.877: video settings reset:
+09:53:11 AM.877: 	base resolution:   1920x1080
+09:53:11 AM.877: 	output resolution: 1280x720
+09:53:11 AM.877: 	downscale filter:  Bicubic
+09:53:11 AM.877: 	fps:               30/1
+09:53:11 AM.877: 	format:            NV12
+09:53:11 AM.915: ---------------------------------
+09:53:11 AM.915: video settings reset:
+09:53:11 AM.915: 	base resolution:   1920x1080
+09:53:11 AM.915: 	output resolution: 1920x1080
+09:53:11 AM.915: 	downscale filter:  Bicubic
+09:53:11 AM.915: 	fps:               60/1
+09:53:11 AM.915: 	format:            NV12
+09:53:11 AM.925: ---------------------------------
+09:53:11 AM.925: [x264 encoder: 'test_x264'] preset: veryfast
+09:53:11 AM.925: [x264 encoder: 'test_x264'] profile: main
+09:53:11 AM.925: [x264 encoder: 'test_x264'] settings:
+09:53:11 AM.925: 	rate_control: CBR
+09:53:11 AM.925: 	bitrate:      10000
+09:53:11 AM.925: 	buffer size:  10000
+09:53:11 AM.925: 	crf:          0
+09:53:11 AM.925: 	fps_num:      60
+09:53:11 AM.925: 	fps_den:      1
+09:53:11 AM.925: 	width:        1920
+09:53:11 AM.925: 	height:       1080
+09:53:11 AM.925: 	keyint:       120
+09:53:11 AM.925: 
+09:53:11 AM.932: ---------------------------------
+09:53:11 AM.933: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: 3
+09:53:11 AM.933: 
+09:53:16 AM.934: Output 'null': stopping
+09:53:16 AM.935: Output 'null': Total frames output: 260
+09:53:16 AM.935: Output 'null': Total drawn frames: 300
+09:53:16 AM.937: Video stopped, number of skipped frames due to encoding lag: 111/287 (38.7%)
+09:53:16 AM.992: ---------------------------------
+09:53:16 AM.992: video settings reset:
+09:53:16 AM.992: 	base resolution:   1920x1080
+09:53:16 AM.992: 	output resolution: 1920x1080
+09:53:16 AM.992: 	downscale filter:  Bicubic
+09:53:16 AM.992: 	fps:               30/1
+09:53:16 AM.992: 	format:            NV12
+09:53:16 AM.997: ---------------------------------
+09:53:16 AM.998: [x264 encoder: 'test_x264'] preset: veryfast
+09:53:16 AM.998: [x264 encoder: 'test_x264'] profile: main
+09:53:16 AM.998: [x264 encoder: 'test_x264'] settings:
+09:53:16 AM.998: 	rate_control: CBR
+09:53:16 AM.998: 	bitrate:      10000
+09:53:16 AM.998: 	buffer size:  10000
+09:53:16 AM.998: 	crf:          0
+09:53:16 AM.998: 	fps_num:      30
+09:53:16 AM.998: 	fps_den:      1
+09:53:16 AM.998: 	width:        1920
+09:53:16 AM.998: 	height:       1080
+09:53:16 AM.998: 	keyint:       60
+09:53:16 AM.998: 
+09:53:17 AM.013: ---------------------------------
+09:53:17 AM.013: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: 3
+09:53:17 AM.013: 
+09:53:22 AM.014: Output 'null': stopping
+09:53:22 AM.014: Output 'null': Total frames output: 121
+09:53:22 AM.014: Output 'null': Total drawn frames: 150
+09:53:22 AM.064: ---------------------------------
+09:53:22 AM.064: video settings reset:
+09:53:22 AM.064: 	base resolution:   1920x1080
+09:53:22 AM.064: 	output resolution: 1280x720
+09:53:22 AM.064: 	downscale filter:  Bicubic
+09:53:22 AM.064: 	fps:               60/1
+09:53:22 AM.064: 	format:            NV12
+09:53:22 AM.068: ---------------------------------
+09:53:22 AM.068: [x264 encoder: 'test_x264'] preset: veryfast
+09:53:22 AM.068: [x264 encoder: 'test_x264'] profile: main
+09:53:22 AM.068: [x264 encoder: 'test_x264'] settings:
+09:53:22 AM.068: 	rate_control: CBR
+09:53:22 AM.068: 	bitrate:      10000
+09:53:22 AM.068: 	buffer size:  10000
+09:53:22 AM.068: 	crf:          0
+09:53:22 AM.068: 	fps_num:      60
+09:53:22 AM.068: 	fps_den:      1
+09:53:22 AM.068: 	width:        1280
+09:53:22 AM.068: 	height:       720
+09:53:22 AM.068: 	keyint:       120
+09:53:22 AM.068: 
+09:53:22 AM.075: ---------------------------------
+09:53:22 AM.075: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: 3
+09:53:22 AM.075: 
+09:53:27 AM.076: Output 'null': stopping
+09:53:27 AM.076: Output 'null': Total frames output: 271
+09:53:27 AM.076: Output 'null': Total drawn frames: 300
+09:53:27 AM.102: ---------------------------------
+09:53:27 AM.102: video settings reset:
+09:53:27 AM.102: 	base resolution:   1920x1080
+09:53:27 AM.102: 	output resolution: 1280x720
+09:53:27 AM.102: 	downscale filter:  Bicubic
+09:53:27 AM.102: 	fps:               30/1
+09:53:27 AM.102: 	format:            NV12
+09:53:27 AM.105: ---------------------------------
+09:53:27 AM.105: [x264 encoder: 'test_x264'] preset: veryfast
+09:53:27 AM.105: [x264 encoder: 'test_x264'] profile: main
+09:53:27 AM.105: [x264 encoder: 'test_x264'] settings:
+09:53:27 AM.105: 	rate_control: CBR
+09:53:27 AM.105: 	bitrate:      10000
+09:53:27 AM.105: 	buffer size:  10000
+09:53:27 AM.105: 	crf:          0
+09:53:27 AM.105: 	fps_num:      30
+09:53:27 AM.105: 	fps_den:      1
+09:53:27 AM.105: 	width:        1280
+09:53:27 AM.105: 	height:       720
+09:53:27 AM.105: 	keyint:       60
+09:53:27 AM.105: 
+09:53:27 AM.109: ---------------------------------
+09:53:27 AM.110: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: 3
+09:53:27 AM.110: 
+09:53:32 AM.111: Output 'null': stopping
+09:53:32 AM.111: Output 'null': Total frames output: 121
+09:53:32 AM.111: Output 'null': Total drawn frames: 150
+09:53:32 AM.138: ---------------------------------
+09:53:32 AM.138: video settings reset:
+09:53:32 AM.138: 	base resolution:   1920x1080
+09:53:32 AM.138: 	output resolution: 1280x720
+09:53:32 AM.138: 	downscale filter:  Bicubic
+09:53:32 AM.138: 	fps:               30/1
+09:53:32 AM.138: 	format:            NV12
+09:53:49 AM.442: ---------------------------------
+09:53:49 AM.442: video settings reset:
+09:53:49 AM.442: 	base resolution:   1920x1080
+09:53:49 AM.442: 	output resolution: 1280x720
+09:53:49 AM.442: 	downscale filter:  Bicubic
+09:53:49 AM.442: 	fps:               60/1
+09:53:49 AM.442: 	format:            NV12
+09:53:49 AM.446: 
+09:53:49 AM.446: ==== Auto-config wizard testing stopping ========
+
+09:54:10 AM.298: ---------------------------------
+09:54:10 AM.298: [x264 encoder: 'simple_h264_stream'] preset: veryfast
+09:54:10 AM.298: [x264 encoder: 'simple_h264_stream'] settings:
+09:54:10 AM.298: 	rate_control: CBR
+09:54:10 AM.298: 	bitrate:      4350
+09:54:10 AM.298: 	buffer size:  4350
+09:54:10 AM.298: 	crf:          0
+09:54:10 AM.298: 	fps_num:      60
+09:54:10 AM.298: 	fps_den:      1
+09:54:10 AM.298: 	width:        1280
+09:54:10 AM.298: 	height:       720
+09:54:10 AM.298: 	keyint:       250
+09:54:10 AM.298: 
+09:54:10 AM.313: ---------------------------------
+09:54:10 AM.313: [FFmpeg aac encoder: 'simple_aac'] bitrate: 160, channels: 2, channel_layout: 3
+09:54:10 AM.313: 
+09:54:10 AM.314: [rtmp stream: 'simple_stream'] Connecting to RTMP URL rtmp://10.0.202.89/live...
+09:54:10 AM.411: [rtmp stream: 'simple_stream'] Connection to rtmp://10.0.202.89/live successful
+09:54:10 AM.412: ==== Streaming Start ===============================================
+09:54:49 AM.546: xshm-input: Geometry 1920x1200 @ 1920,0
+09:54:49 AM.551: User added source 'Screen Capture (XSHM)' (xshm_input) to scene 'Scene'

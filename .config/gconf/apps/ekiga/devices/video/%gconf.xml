@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="input_device" mtime="1516022742" type="string">
+		<stringvalue>Moving Logo (Moving Logo/Moving Logo)</stringvalue>
+	</entry>
+	<entry name="size" mtime="1516022742" type="int" value="3"/>
+</gconf>

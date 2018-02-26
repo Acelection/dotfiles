@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="output_device" mtime="1516022742" type="string">
+		<stringvalue>Default (PTLIB/ALSA)</stringvalue>
+	</entry>
+	<entry name="incoming_call_sound" mtime="1516020151" type="string">
+		<stringvalue>/usr/share/sounds/ekiga/ring.wav</stringvalue>
+	</entry>
+</gconf>
